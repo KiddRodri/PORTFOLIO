@@ -180,7 +180,7 @@ i:hover{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border: 2px solid #000;
+    border: 2px solid #fff;
 }
 
 .hero-presentation h2{
@@ -218,6 +218,7 @@ i:hover{
     margin-top: 50px;
     padding: 20px 0;
     color: #000;
+    border-radius: 50px;
 }
 
 .hero-start a{
@@ -273,7 +274,7 @@ i:hover{
     
     .logo{
         position: absolute;
-        top: 40px;
+        top: 55px;
         left: 50px;
     }
 
@@ -286,8 +287,8 @@ i:hover{
         position: absolute;
         top: 0;
         left: 0;
-        background-color: rgba(255, 255, 255, 0.20);
-        backdrop-filter: blur(30px);
+        background-color: #000;
+
         width: 100%;
         height: 100vh;
         display: flex;
@@ -375,3 +376,41 @@ i:hover{
 }
 
 
+@media screen and (max-width: 1600px){
+    .hero{
+        grid-row: 3/9;
+    }
+
+    .hero-figure img{
+        width: 80%;
+    }
+    
+    .hero-presentation .nexo{
+        font-size: 1.5rem;
+        font-family: var(--font-span);
+
+    }
+
+    .hero-presentation .name{
+        font-size: 3rem;
+        font-family: var(--font-principal);
+
+    }
+
+    .hero-presentation .user{
+        font-size: 1.2rem;
+        font-family: var(--font-secundary);
+    }
+    .hero-presentation .user .leter{
+        font-size: 3rem;
+        font-weight: 200;
+        font-family: var(--font-span);
+    }
+
+    .hero-presentation .hero-description{
+        width: 300px;
+        height: 120px;
+        font-size: 1.1rem;
+        font-family: var(--font-secundary);
+    }
+}
