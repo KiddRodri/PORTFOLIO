@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=DynaPuff:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=DynaPuff:wght@500&family=Ubuntu+Condensed&display=swap');
+:root{
+    --font-principal: 'DynaPuff', cursive;
+    --font-secundary: 'Ubuntu Condensed', sans-serif;
+    --font-span: 'Caveat', cursive;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+header{
+    width: 100%;
+    height: 90vh;
+    background-image: url(../items/banner-bg.png);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr );
+    grid-template-rows: repeat(9, 1fr);
+}
+
+i{
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: #000;
+    background-color: #fff;
+    padding: 6px 8px;    
+    border: 1px solid #000;
+    transition: all 1s;
+}
+
+i:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.icon li{
+    margin-left: 30px;
+}
+
+
+.navbar{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    width: 100%;
+}
+
+.nav-links{
+    display: flex;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar .nav-links .links{
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links .links li {
+    margin: 0 30px;
+    font-weight: bold;
+    position: relative;
+}
+
+.navbar .nav-links .links li a{
+    font-weight: bold;
+    font-family: var(--font-secundary);
+    letter-spacing: 1px;
+}
+.navbar .hamburguer{
+    display: none;
+    width: 40px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.navbar .nav-links .links li a::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 20px;
+    opacity: 0;
+}
+
+.navbar .nav-links .links li a:hover{
+    color: blueviolet;
+    transition: all 2s;
+}
+
+.nav-start{
+    width: 180px;
+    height: 50px;
+    background-color: none;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:  0 50px;
+    color: #000;
+    position: relative;
+}
+
+
+
+.nav-start a{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.nav-start a::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    width: 0;
+    height: 4px;
+    background: #fff;
+    opacity: 0;
+    transition: all 1s;
+    border-radius: 20px;
+}
+
+.nav-start a:hover::after{
+    width: 60%;
+    opacity: 1;
+}
+
+
+.navbar .nav-links .links li a:hover::after{
+    opacity: 1;
+    animation: animacion 1s;
+}
+
+/* SECCION HERO */
+.hero{
+
+    grid-column: 2/12;
+    grid-row: 2/9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-presentation .welcome{
+    width: 200px;
+    height: 40px;
+    font-size: 1.3rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-secundary);
+    background-image: url(../items/fondo-galaxia-realista_23-2148991322.avif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid #000;
+}
+
+.hero-presentation h2{
+    font-size: 3.5rem;
+    font-family: var(--font-secundary);
+    padding: 20px 0;
+}
+
+.hero-presentation .nexo{
+    font-size: 2.5rem;
+    font-family: var(--font-span);
+    padding: 20px 0;
+}
+
+.hero-presentation .name{
+    font-size: 5.5rem;
+    font-family: var(--font-principal);
+
+}
+
+.hero-presentation .user{
+    font-size: 2rem;
+    font-family: var(--font-secundary);
+    padding: 10px 0;
+}
+
+.hero-start{
+    width: 180px;
+    height: 50px;
+    background-color: none;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px 0;
+    color: #000;
+}
+
+.hero-start a{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.hero-presentation .user .leter{
+    font-size: 4.2rem;
+    font-weight: 200;
+    font-family: var(--font-span);
+}
+
+.hero-presentation .hero-description{
+    width: 400px;
+    height: 120px;
+    font-size: 1.3rem;
+    font-family: var(--font-secundary);
+}
+
+.hero-figure img{
+    animation: astronauta 4s infinite;
+}
+
+@keyframes astronauta {
+    0%{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(60px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes animacion {
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 100%;
+    }
+}
+
+
+.active{
+    margin-left: 0;
+}
+
+@media screen and (max-width: 900px) {
+    
+    .logo{
+        position: absolute;
+        top: 40px;
+        left: 50px;
+    }
+
+    .navbar .hamburguer{
+    display: block;
+    cursor: pointer;
+    }
+    
+    .nav-links{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.20);
+        backdrop-filter: blur(7px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 2s;
+    }
+
+    .active{
+        margin-left: -100%;
+    }
+
+    .navbar .nav-links .links{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .navbar{
+        padding: 0;
+    }
+    .navbar .nav-links .links li {
+        margin: 50px 0;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .icon{
+        margin-top: 40px;
+        margin-right: 40px;
+    }
+
+    .icon li{
+        padding: 0 20px;
+    }
+
+    .nav-start{
+        margin: 50px 0;
+    }
+
+
+    .hero-figure{
+        display: none;
+    }
+}
+
+
